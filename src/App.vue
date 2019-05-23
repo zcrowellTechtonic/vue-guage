@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+      <RoundedChart />
      <canvas id="guage-o-meter" height="175" width="175"></canvas>
   </div>
 </template>
@@ -7,7 +8,11 @@
 <script>
 import Chart from 'chart.js';
 import Guage from './Guage.js';
+import RoundedChart from './RoundedChart.vue'
 export default {
+  components: {
+    RoundedChart
+  },
   methods: {
   createChart(chartId, chartData) {
     var ctx = document.getElementById("guage-o-meter").getContext("2d");
